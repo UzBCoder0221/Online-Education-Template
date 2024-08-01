@@ -1,0 +1,44 @@
+body{
+  background-color: $bg-color;
+}
+.page-header {
+  .container {
+    .header-wrapper {
+      @include flexAlignCenter;
+      margin: 16px 0 17px;
+      .home {
+        @include textProperty(#252b42, $MB, 24, 32);
+        letter-spacing: 0.10000000149011612px;
+      }
+      .header-nav {
+        display: flex;
+        gap: 21px;
+        margin: 0 240px 0 83px;
+        &-item {
+          @include textProperty($secondary, $MB, 14, 24);
+          padding: 17px 0;
+          letter-spacing: 0.20000000298023224px;
+          text-align: center;
+        }
+      }
+      .action-wrapper {
+        @include flex(45);
+        .login {
+          @include textProperty(#23a6f0, $MB, 14, 22);
+          letter-spacing: 0.20000000298023224px;
+          text-align: right;
+          background: transparent;
+        }
+        .join-us {
+          @include flexCenter(15);
+          @include textProperty(#fff, $MB, 14, 22);
+          padding: 15px 25px;
+          border-radius: 5px;
+          letter-spacing: 0.20000000298023224px;
+          background-color: #23a6f0;
+          margin: 3px 0;
+        }
+      }
+    }
+  }
+}

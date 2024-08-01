@@ -1,0 +1,83 @@
+@mixin flex($gap:0) {
+  display: flex;
+  gap: #{$gap + px};
+}
+
+@mixin flexColumn($gap:0) {
+  @include flex($gap);
+  flex-direction: column;
+}
+@mixin flexRow($gap:0) {
+  @include flex($gap);
+  flex-direction: row;
+}
+@mixin flexAlignCenter($gap:0) {
+  @include flex($gap);
+  align-items: center;
+}
+@mixin flexAlignCenterRow($gap:0) {
+  @include flexRow($gap);
+  align-items: center;
+}
+@mixin flexAlignCenterColumn($gap:0) {
+  @include flexColumn($gap);
+  align-items: center;
+}
+@mixin flexContentCenter($gap:0) {
+  @include flex($gap);
+  justify-content: center;
+}
+
+@mixin flexColumnBetween($gap:0) {
+  @include flexColumn($gap);
+  justify-content: space-between;
+}
+@mixin flexBetween($gap:0) {
+  @include flexAlignCenter($gap);
+  justify-content: space-between;
+}
+@mixin flexCenter($gap:0) {
+  @include flexAlignCenter($gap);
+  justify-content: center;
+}
+
+// a
+
+@mixin setWidthHeight($width: #{$width + px}, $height: #{$width + px}) {
+  width: $width;
+  height: $height;
+}
+
+@mixin setPosition($top:unset,$right:unset,$bottom:unset,$left:unset){
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin textProperty(
+  $color: $primary,
+  $font-family: $RM,
+  $font-size: 16,
+  $line-height: 18,
+  $padding: 0
+) {
+  color: $color;
+  font-family: $font-family;
+  font-size: #{$font-size + px};
+  line-height: #{$line-height + px};
+  padding: #{$padding + px};
+}
+
+@mixin viewAllNav() {
+  font-family: $RR;
+  font-size: 20px;
+  line-height: 28px;
+  color: $gray;
+}
+@mixin sectionDataTitle() {
+  font-family: $RM;
+  font-size: 28px;
+  line-height: 36px;
+  color: $primary;
+}

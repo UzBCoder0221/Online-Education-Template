@@ -1,2 +1,2 @@
 # Online-Education-Template
-Online education frontend landing page using scss.
+Online education frontend landing page using scss. (Unresponsive)

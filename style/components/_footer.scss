@@ -1,0 +1,50 @@
+.page-footer {
+    background-color: $light;
+  .container {
+    .footer-wrapper {
+        @include flexBetween(30);
+        // justify-content: space-evenly;
+        padding: 80px 0;
+      .footer-navbar-git {
+        @include flexColumn(25);
+        & > h3 {
+          @include textProperty($text-color, $MB, 24, 32);
+          letter-spacing: 0.1px;
+        }
+        & > p {
+          @include textProperty($secondary, $MR, 14, 20);
+          max-width: 211px;
+          letter-spacing: 0.2px;
+        }
+        .social-media {
+          @include flex(20);
+          & > * {
+            @include flexCenter;
+            height: 24px;
+            width: 24px;
+          }
+        }
+      }
+      .footer-navbar {
+        @include flexColumn(20);
+        & > h3 {
+          @include textProperty($text-color, $MB, 24, 32);
+          letter-spacing: 0.1px;
+        }
+        .footer-nav {
+          @include flexColumn(10);
+          & > a {
+            @include textProperty($secondary, $MB, 14, 24);
+            letter-spacing: 0.2px;
+          }
+        }
+      }
+    }
+  }
+  .footer-lower{
+    padding: 25px 0;
+    background-color: #FAFAFA;
+    width: 100%;
+    text-align: center;
+  }
+}

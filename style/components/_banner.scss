@@ -1,0 +1,432 @@
+.page-content {
+  .banner {
+    @include flexAlignCenterColumn;
+    padding: 80px 0;
+
+    .container {
+      .page-content-data-upper {
+        padding: 0 180px;
+
+        &-sub {
+          @include flexAlignCenterColumn(40);
+          padding: 40px 70px;
+        }
+
+        .page-subtitle {
+          @include textProperty($primary, $MB, 16, 24);
+          letter-spacing: 0.1px;
+        }
+
+        .page-title {
+          @include textProperty(#000, $MB, 58, 80);
+          letter-spacing: 0.2px;
+          text-align: center;
+        }
+
+        .page-detail {
+          @include textProperty($secondary, $MR, 20, 30);
+          letter-spacing: 0.2px;
+          text-align: center;
+        }
+
+        .more-btn {
+          @include flex(10);
+
+          &-one {
+            @include textProperty($light, $MB, 14, 22);
+            background-color: $primary;
+            letter-spacing: 0.20000000298023224px;
+            border-radius: 5px;
+            text-align: center;
+          }
+
+          &-two {
+            @include textProperty($primary, $MB, 14, 22);
+            letter-spacing: 0.20000000298023224px;
+            border-radius: 5px;
+            text-align: center;
+            background-color: transparent;
+          }
+
+          & > * {
+            border: 1px solid $primary;
+            padding: 15px 40px;
+          }
+        }
+      }
+
+      .page-content-data-lower {
+        .card-wrapper {
+          @include flex(30);
+
+          .card {
+            @include flexColumn(20);
+            padding: 35px 40px;
+            background-color: $light;
+
+            &:nth-last-of-type(1) {
+              background-color: $primary;
+
+              & > h3 {
+                color: $light;
+              }
+
+              & > p {
+                color: $light;
+              }
+
+              & > span {
+                background-color: $light;
+              }
+            }
+
+            &-icon-wrapper1 {
+              background-color: $faded-primary-color;
+              border-radius: 10px;
+              padding: 22px 19px;
+              width: 70px;
+              height: 76px;
+
+              & > img {
+                height: 32px;
+                width: 32px;
+              }
+            }
+
+            &-icon-wrapper2 {
+              background-color: $faded-primary-color-1;
+              border-radius: 10px;
+              padding: 22px 19px;
+              width: 70px;
+              height: 76px;
+
+              & > img {
+                height: 32px;
+                width: 32px;
+              }
+            }
+
+            &-icon-wrapper3 {
+              background-color: $light;
+              border-radius: 10px;
+              padding: 22px 19px;
+              width: 70px;
+              height: 76px;
+
+              & > img {
+                height: 32px;
+                width: 32px;
+              }
+            }
+
+            &-title {
+              @include textProperty(#000, $MB, 16, 24);
+              letter-spacing: 0.1px;
+            }
+
+            & > span {
+              display: block;
+              background-color: #e74040;
+              width: 50px;
+              height: 2px;
+            }
+
+            &-detail {
+              @include textProperty($secondary, $MR, 14, 20);
+              letter-spacing: 0.2px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .package {
+    background-color: $light;
+    padding: 160px 0;
+
+    .container {
+      .package-wrapper {
+        @include flexAlignCenterRow(156);
+
+        .package-img-wrapper {
+          width: 508px;
+          height: 395px;
+        }
+
+        .package-detail {
+          @include flexColumn(35);
+
+          & > span {
+            display: block;
+            height: 7px;
+            width: 94px;
+            background-color: $danger-color;
+          }
+
+          .package-title {
+            @include textProperty(#000, $MB, 40, 50);
+            letter-spacing: 0.2px;
+          }
+
+          .package-desc {
+            @include textProperty($secondary, $MR, 14, 20);
+            letter-spacing: 0.2px;
+          }
+
+          & > button {
+            @include flexAlignCenter(10);
+            @include textProperty($primary, $MB, 14, 24);
+            background-color: transparent;
+            letter-spacing: 0.2px;
+          }
+        }
+      }
+    }
+  }
+
+  .online-education {
+    background-color: $light;
+    padding: 112px 0;
+
+    .container {
+      .online-education-data {
+        @include flexColumn(12);
+        margin: 112px 0;
+        .online-education-subtitle {
+          @include textProperty($primary, $MB, 14, 24);
+          letter-spacing: 0.2px;
+        }
+
+        .online-education-title {
+          @include textProperty(#000, $MB, 40, 50);
+          letter-spacing: 0.2px;
+        }
+
+        .online-education-desc {
+          @include textProperty($secondary, $MR, 14, 20);
+          max-width: 469px;
+          letter-spacing: 0.2px;
+        }
+      }
+      .online-education-card-wrapper {
+        @include flex(30);
+        .card {
+          width: 249px;
+          &-img-wrapper {
+            position: relative;
+            height: 300px;
+            & > img {
+              position: absolute;
+              @include setPosition(0, 0, 0, 0);
+            }
+            & > span {
+              position: absolute;
+              border-radius: 3px;
+              background-color: $danger-color;
+              @include textProperty($light, $MB, 14, 24);
+              @include setPosition(20px, unset, unset, 20px);
+              padding: 0 10px;
+            }
+            & > div {
+              @include flexBetween(10);
+              position: absolute;
+              @include setPosition(unset, 49px, 24px, 49px);
+              & > * {
+                width: 40px;
+                height: 40px;
+                border-radius: 45px;
+                background-color: $light;
+                @include flexCenter;
+                & > img {
+                  max-width: 20px;
+                  max-height: 20px;
+                }
+              }
+            }
+          }
+          &-content {
+            @include flexColumn(10);
+            padding: 26px 25px;
+            .title-container {
+              &-inner {
+                @include flexBetween;
+                & > h4 {
+                  @include textProperty($primary, $MB, 14, 24);
+                  letter-spacing: 0.2px;
+                }
+                .rating {
+                  @include textProperty($light, $MR, 12, 16);
+                  letter-spacing: 0.2px;
+                  @include flexAlignCenter(5);
+                  border-radius: 20px;
+                  padding: 5px;
+                  width: 50px;
+                  background-color: $text-color;
+                }
+              }
+              & > h3 {
+                @include textProperty($text-color, $MB, 16, 24);
+                letter-spacing: 0.1px;
+              }
+            }
+            & > p {
+              @include textProperty($secondary, $MR, 14, 20);
+            }
+            .sales {
+              @include textProperty($secondary, $MB, 14, 24);
+              @include flexAlignCenter(10);
+            }
+            .price {
+              @include flexAlignCenter(5);
+              padding: 5px 3px;
+              & > del {
+                @include textProperty($secondary, $MB, 16, 24);
+              }
+              & > span {
+                @include textProperty(#40bb15, $MB, 16, 24);
+              }
+            }
+            .education-details {
+              @include flexBetween(10);
+              padding: 15px 0;
+              & > div {
+                @include textProperty($secondary, $MR, 12, 16);
+                @include flexAlignCenter(5);
+              }
+            }
+            & > button {
+              @include flexAlignCenter(10);
+              @include textProperty($primary, $MB, 14, 24);
+              background-color: transparent;
+              border: 1px solid $primary;
+              border-radius: 37px;
+              padding: 10px 20px;
+              letter-spacing: 0.2px;
+              max-width: 150px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .tutors {
+    .container {
+      .tutor-wrapper {
+        @include flexColumn(96);
+          margin: 112px 0 220px;
+        .tutor-data {
+          @include flexColumn(12);
+          .tutor-subtitle {
+            @include textProperty($primary, $MB, 14, 24);
+            letter-spacing: 0.2px;
+          }
+
+          .tutor-title {
+            @include textProperty(#000, $MB, 40, 50);
+            letter-spacing: 0.2px;
+          }
+
+          .tutor-desc {
+            @include textProperty($secondary, $MR, 14, 20);
+            max-width: 469px;
+            letter-spacing: 0.2px;
+          }
+        }
+        .tutors-wrapper {
+          @include flexContentCenter(30);
+          .tutor-card {
+            @include flexAlignCenterColumn(15);
+            background-color: $light;
+            .tutor-img-wrapper {
+              margin-top: 25px;
+              width: 128px;
+              height: 128px;
+              border-radius: 50%;
+              overflow: hidden;
+            }
+            .tutor-detail {
+              padding: 30px 49.5px;
+              @include flexAlignCenterColumn(15);
+
+              .tutor-desc-data {
+                @include textProperty($secondary, $MR, 14, 20);
+                max-width: 360px;
+                letter-spacing: 0.2px;
+                text-align: center;
+              }
+              .tutor-rating {
+                @include flex(5);
+              }
+              .spn {
+                @include flexColumn(5);
+                .tutor-title {
+                  @include textProperty($text-color, $MB, 16, 24);
+                  letter-spacing: 0.1px;
+                  text-align: center;
+                }
+                .tutor-speciality {
+                  @include textProperty($secondary, $MB, 14, 24);
+                  letter-spacing: 0.2px;
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .subscribe {
+    background-color: $light;
+    .container {
+      .subscription-wrapper {
+        padding: 160px 0;
+        @include flexAlignCenterColumn(80);
+        .subscription-data {
+          @include flexAlignCenterColumn(12);
+          .subscription-subtitle {
+            @include textProperty($primary, $MB, 14, 24);
+            letter-spacing: 0.2px;
+          }
+
+          .subscription-title {
+            @include textProperty(#000, $MB, 40, 50);
+            letter-spacing: 0.2px;
+          }
+
+          .subscription-desc {
+            @include textProperty($secondary, $MR, 14, 20);
+            max-width: 469px;
+            text-align: center;
+            letter-spacing: 0.2px;
+          }
+        }
+        &>form{
+            border-radius: 5px;
+            border:1px solid #E6E6E6;
+            max-width: 688px;
+            display: flex;
+            overflow: hidden;
+            #email{
+                @include textProperty($secondary,$MR,14,28);
+                padding: 15px 20px;
+                width: 571px;
+                &::placeholder{
+                    color:$secondary;
+                }
+            }
+            &>input[type=submit]{
+                background-color: $primary;
+                @include textProperty($light,$MR,14,28);
+                padding: 15px 22.5px;
+                border-radius: 0 5px 5px 0;
+letter-spacing: 0.2px;
+text-align: center;
+
+            }
+        }
+      }
+    }
+  }
+}
